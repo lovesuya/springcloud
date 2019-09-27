@@ -3,4 +3,11 @@ spring:
     config:
       server:
         git:
-          basedir:
+          uri: https://github.com/lovesuya/springcloud.git
+          username: 812256102@qq.com
+          password: zhang1314y
+          search-paths: application-config
+  application:
+    name: config
+server:
+    port: 9090
