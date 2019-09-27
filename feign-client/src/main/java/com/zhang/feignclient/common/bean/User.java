@@ -8,6 +8,8 @@ public class User implements Serializable {
     private String name;
     private Integer age;
 
+    private String url;
+
     public Integer getId() {
         return id;
     }
@@ -30,5 +32,13 @@ public class User implements Serializable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

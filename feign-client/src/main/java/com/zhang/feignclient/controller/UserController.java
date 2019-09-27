@@ -27,6 +27,7 @@ public class UserController {
     public @ResponseBody
     List<User> getUserInfoById(@RequestBody User bean){
 
+        bean.setUrl(bean.getUrl()+"_8082");
         return userService.getUserList(bean);
     }
 

@@ -14,11 +14,11 @@ public class UserController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping(value="/list")
+    @RequestMapping(value = "/list")
     public @ResponseBody
-    Object getUserInfoById(@RequestBody User bean){
-
-        return restTemplate.postForObject("http://FRIGN-CLIENT/user/list",bean,List.class);
+    Object getUserInfoById(@RequestBody User bean) {
+        bean.setUrl(bean.getUrl() + "_8083");
+        return restTemplate.postForObject("http://eureka-client-one/user/list", bean, List.class);
     }
 
 }
